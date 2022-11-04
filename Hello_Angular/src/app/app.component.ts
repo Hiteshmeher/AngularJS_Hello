@@ -12,15 +12,29 @@ export class AppComponent {
   userName: string = "";
   nameError: string="";
 
+  /**
+   * Title for the Page - One way data Binding
+   */
   ngOnInit(): void{
     this.title = "Hello from Bridgelabz"
   }
 
+/**
+ *   
+ * @param $event  
+ * Method where on clicking Url will open
+ */
   onClick($event: any){
     console.log("Save button is clicked!", $event);
     window.open(this.url, "_blank");
   }
 
+  /**
+   * 
+   * @param $event 
+   * @returns   
+   * Method to check whether username is valid or not
+   */
   onInput($event:any)
   {
     console.log("change event occured!",$event.data);
